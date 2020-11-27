@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: "2020-09-14T01:56:50Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: prometheus
+    chart: prometheus-0.0.1
+    monitoring.coreos.com: "true"
+    prometheus: cluster-monitoring
+    release: cluster-monitoring
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+          f:chart: {}
+          f:monitoring.coreos.com: {}
+          f:prometheus: {}
+          f:release: {}
+      f:spec:
+        f:accessModes: {}
+        f:dataSource:
+          .: {}
+          f:apiGroup: {}
+          f:kind: {}
+          f:name: {}
+        f:resources:
+          f:requests:
+            .: {}
+            f:storage: {}
+        f:volumeMode: {}
+      f:status:
+        f:phase: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-14T01:56:50Z"
+  name: prometheus-cluster-monitoring-db-prometheus-cluster-monitoring-0
+  namespace: cattle-prometheus
+  resourceVersion: "829904"
+  selfLink: /api/v1/namespaces/cattle-prometheus/persistentvolumeclaims/prometheus-cluster-monitoring-db-prometheus-cluster-monitoring-0
+  uid: 15a99501-7198-41f3-957f-73b45b02d997
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  volumeMode: Filesystem
+status:
+  phase: Pending

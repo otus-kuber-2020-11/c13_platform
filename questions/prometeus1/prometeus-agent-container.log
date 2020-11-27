@@ -1,0 +1,19 @@
+﻿[2020-11-27T11:05:44Z] listening on 10.42.85.6:9090, proxying to http://127.0.0.1:9090 with ignoring 'remote reader' labels [prometheus,prometheus_replica], only allow maximum 512 connections with 5m0s read timeout . 
+[2020-11-27T11:05:44Z] Start listening for connections on 10.42.85.6:9090 
+2020/11/27 11:06:48 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:06:58 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:08 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:18 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:28 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:38 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:48 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:07:58 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:08 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:18 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:28 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:38 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:48 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:08:58 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:09:08 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:09:28 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 
+2020/11/27 11:09:38 http: proxy error: dial tcp 127.0.0.1:9090: connect: connection refused 

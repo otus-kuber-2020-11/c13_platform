@@ -1,0 +1,3 @@
+﻿ts=2020-09-21T11:37:19.885063333Z caller=main.go:85 msg="Starting prometheus-config-reloader version '0.38.1'." 
+level=info ts=2020-09-21T11:37:26.191220973Z caller=reloader.go:289 msg="Prometheus reload triggered" cfg_in=/etc/prometheus/config/prometheus.yaml.gz cfg_out=/etc/prometheus/config_out/prometheus.env.yaml rule_dirs= 
+level=info ts=2020-09-21T11:37:26.191264273Z caller=reloader.go:157 msg="started watching config file and non-recursively rule dirs for changes" cfg=/etc/prometheus/config/prometheus.yaml.gz out=/etc/prometheus/config_out/prometheus.env.yaml dirs= 

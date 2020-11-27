@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-09-14T06:56:45Z"
+  labels:
+    monitoring.coreos.com: "true"
+    operated-prometheus: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:monitoring.coreos.com: {}
+          f:operated-prometheus: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"3f4c4ad9-b6b1-4d03-8dc2-2bb903239314"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          .: {}
+          k:{"port":9090,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: operator
+    operation: Update
+    time: "2020-09-14T06:56:45Z"
+  name: prometheus-operated
+  namespace: cattle-prometheus
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Prometheus
+    name: cluster-monitoring
+    uid: 3f4c4ad9-b6b1-4d03-8dc2-2bb903239314
+  resourceVersion: "876853"
+  selfLink: /api/v1/namespaces/cattle-prometheus/services/prometheus-operated
+  uid: a0f9529c-fc2a-4c00-9ee5-5ef7fd1073ee
+spec:
+  clusterIP: None
+  ports:
+  - name: web
+    port: 9090
+    protocol: TCP
+    targetPort: web
+  selector:
+    app: prometheus
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,74 @@
+﻿level=info ts=2020-11-27T11:03:59.663Z caller=main.go:333 msg="Starting Prometheus" version="(version=2.17.2, branch=HEAD, revision=18254838fbe25dcc732c950ae05f78ed4db1292c)" 
+level=info ts=2020-11-27T11:03:59.663Z caller=main.go:334 build_context="(go=go1.13.10, user=root@9cb154c268a2, date=20200420-08:27:08)" 
+level=info ts=2020-11-27T11:03:59.663Z caller=main.go:335 host_details="(Linux 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64 prometheus-cluster-monitoring-0 (none))" 
+level=info ts=2020-11-27T11:03:59.663Z caller=main.go:336 fd_limits="(soft=1048576, hard=1048576)" 
+level=info ts=2020-11-27T11:03:59.663Z caller=main.go:337 vm_limits="(soft=unlimited, hard=unlimited)" 
+level=info ts=2020-11-27T11:03:59.665Z caller=web.go:515 component=web msg="Start listening for connections" address=127.0.0.1:9090 
+level=info ts=2020-11-27T11:03:59.665Z caller=main.go:667 msg="Starting TSDB ..." 
+level=info ts=2020-11-27T11:03:59.665Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605708000000 maxt=1605715200000 ulid=01EQE4Y5EJRQ2QGKN59XJ58D8S 
+level=info ts=2020-11-27T11:03:59.665Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605715200000 maxt=1605722400000 ulid=01EQEDWQ47P8VYZ7J5DS54ME6G 
+level=info ts=2020-11-27T11:03:59.666Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605722400000 maxt=1605729600000 ulid=01EQEZYP5V0TAPR1M6F9WG8Z9S 
+level=info ts=2020-11-27T11:03:59.666Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605729600000 maxt=1605736800000 ulid=01EQEZYVSTE4TSAF2C11V8GBA7 
+level=info ts=2020-11-27T11:03:59.666Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605736800000 maxt=1605744000000 ulid=01EQF0B7VHKVB7YCF98DBN0AVQ 
+level=info ts=2020-11-27T11:03:59.666Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605744000000 maxt=1605751200000 ulid=01EQFG0YHH39WYWSWBYV5R8QSV 
+level=info ts=2020-11-27T11:03:59.666Z caller=repair.go:59 component=tsdb msg="found healthy block" mint=1605751200000 maxt=1605758400000 ulid=01EQFG162QYNXVG4FS5HJ1QCG4 
+level=info ts=2020-11-27T11:03:59.714Z caller=head.go:575 component=tsdb msg="replaying WAL, this may take awhile" 
+level=info ts=2020-11-27T11:04:04.113Z caller=head.go:600 component=tsdb msg="WAL checkpoint loaded" 
+level=info ts=2020-11-27T11:04:04.115Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2504 maxSegment=4791 
+level=info ts=2020-11-27T11:04:04.115Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2505 maxSegment=4791 
+level=info ts=2020-11-27T11:04:04.116Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2506 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.236Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2507 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.236Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2508 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.402Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2509 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.410Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2510 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.417Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2511 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.426Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2512 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.430Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2513 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.506Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2514 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.512Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2515 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.512Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2516 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.519Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2517 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.527Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2518 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.528Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2519 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.533Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2520 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.534Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2521 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.534Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2522 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.540Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2523 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.545Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2524 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.545Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2525 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.545Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2526 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.545Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2527 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.546Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2528 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.546Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2529 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.547Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2530 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.547Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2531 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.547Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2532 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.547Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2533 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.548Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2534 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.570Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2535 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.570Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2536 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.570Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2537 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.570Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2538 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.571Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2539 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.571Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2540 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.573Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2541 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.573Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2542 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.573Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2543 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.574Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2544 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.574Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2545 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.574Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2546 maxSegment=4791 
+level=info ts=2020-11-27T11:04:06.574Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2547 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.279Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2548 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.280Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2549 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.280Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2550 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.281Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2551 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.281Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2552 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.281Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2553 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.282Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2554 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.282Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2555 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.282Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2556 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.291Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2557 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.300Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2558 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.303Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2559 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.370Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2560 maxSegment=4791 
+level=info ts=2020-11-27T11:04:07.371Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2561 maxSegment=4791 

@@ -1,0 +1,845 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/podIP: 10.42.85.6/32
+    cni.projectcalico.org/podIPs: 10.42.85.6/32
+  creationTimestamp: "2020-09-14T06:56:45Z"
+  generateName: prometheus-cluster-monitoring-
+  labels:
+    app: prometheus
+    chart: prometheus-0.0.1
+    controller-revision-hash: prometheus-cluster-monitoring-86d668c84c
+    monitoring.coreos.com: "true"
+    prometheus: cluster-monitoring
+    release: cluster-monitoring
+    statefulset.kubernetes.io/pod-name: prometheus-cluster-monitoring-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:chart: {}
+          f:controller-revision-hash: {}
+          f:monitoring.coreos.com: {}
+          f:prometheus: {}
+          f:release: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"006652ec-7dad-43d9-8f6e-bc1eae3f9c4a"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"prometheus"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/prometheus/certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/configmaps/prometheus-cluster-monitoring-nginx"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/rules/prometheus-cluster-monitoring-rulefiles-0"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/secrets/exporter-etcd-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/prometheus"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"prometheus-agent"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef:
+                    .: {}
+                    f:apiVersion: {}
+                    f:fieldPath: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9090,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+          k:{"name":"prometheus-config-reloader"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef:
+                    .: {}
+                    f:apiVersion: {}
+                    f:fieldPath: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/prometheus/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"prometheus-proxy"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef:
+                    .: {}
+                    f:apiVersion: {}
+                    f:fieldPath: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:runAsGroup: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/nginx"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/cache/nginx"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"rules-configmap-reloader"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/prometheus/rules/prometheus-cluster-monitoring-rulefiles-0"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:nodeSelector:
+          .: {}
+          f:kubernetes.io/os: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"config-out"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"configmap-prometheus-cluster-monitoring-nginx"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"nginx-home"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"prometheus-cluster-monitoring-db"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"prometheus-cluster-monitoring-rulefiles-0"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"secret-exporter-etcd-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"tls-assets"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-14T06:56:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cni.projectcalico.org/podIP: {}
+          f:cni.projectcalico.org/podIPs: {}
+    manager: calico
+    operation: Update
+    time: "2020-09-21T11:37:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.42.85.6"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-11-27T12:24:55Z"
+  name: prometheus-cluster-monitoring-0
+  namespace: cattle-prometheus
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: prometheus-cluster-monitoring
+    uid: 006652ec-7dad-43d9-8f6e-bc1eae3f9c4a
+  resourceVersion: "17632165"
+  selfLink: /api/v1/namespaces/cattle-prometheus/pods/prometheus-cluster-monitoring-0
+  uid: 728740c5-34a3-4e1b-82a1-328f1aed4637
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: prometheus
+              prometheus: cluster-monitoring
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - args:
+    - --web.console.templates=/etc/prometheus/consoles
+    - --web.console.libraries=/etc/prometheus/console_libraries
+    - --config.file=/etc/prometheus/config_out/prometheus.env.yaml
+    - --storage.tsdb.path=/prometheus
+    - --storage.tsdb.retention.time=12h
+    - --web.enable-lifecycle
+    - --storage.tsdb.no-lockfile
+    - --web.route-prefix=/
+    - --web.listen-address=127.0.0.1:9090
+    image: rancher/prom-prometheus:v2.17.2
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - if [ -x "$(command -v curl)" ]; then curl http://localhost:9090/-/healthy;
+          elif [ -x "$(command -v wget)" ]; then wget -q -O /dev/null http://localhost:9090/-/healthy;
+          else exit 1; fi
+      failureThreshold: 6
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: prometheus
+    readinessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - if [ -x "$(command -v curl)" ]; then curl http://localhost:9090/-/ready;
+          elif [ -x "$(command -v wget)" ]; then wget -q -O /dev/null http://localhost:9090/-/ready;
+          else exit 1; fi
+      failureThreshold: 120
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 3
+    resources:
+      limits:
+        cpu: "1"
+        memory: 1000Mi
+      requests:
+        cpu: 750m
+        memory: 750Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/prometheus/config_out
+      name: config-out
+      readOnly: true
+    - mountPath: /etc/prometheus/certs
+      name: tls-assets
+      readOnly: true
+    - mountPath: /prometheus
+      name: prometheus-cluster-monitoring-db
+    - mountPath: /etc/prometheus/rules/prometheus-cluster-monitoring-rulefiles-0
+      name: prometheus-cluster-monitoring-rulefiles-0
+    - mountPath: /etc/prometheus/secrets/exporter-etcd-cert
+      name: secret-exporter-etcd-cert
+      readOnly: true
+    - mountPath: /etc/prometheus/configmaps/prometheus-cluster-monitoring-nginx
+      name: configmap-prometheus-cluster-monitoring-nginx
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: cluster-monitoring-token-jzjlw
+      readOnly: true
+  - args:
+    - --log-format=logfmt
+    - --reload-url=http://localhost:9090/-/reload
+    - --config-file=/etc/prometheus/config/prometheus.yaml.gz
+    - --config-envsubst-file=/etc/prometheus/config_out/prometheus.env.yaml
+    command:
+    - /bin/prometheus-config-reloader
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: rancher/coreos-prometheus-config-reloader:v0.38.1
+    imagePullPolicy: IfNotPresent
+    name: prometheus-config-reloader
+    resources:
+      limits:
+        cpu: 100m
+        memory: 25Mi
+      requests:
+        cpu: 100m
+        memory: 25Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/prometheus/config
+      name: config
+    - mountPath: /etc/prometheus/config_out
+      name: config-out
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: cluster-monitoring-token-jzjlw
+      readOnly: true
+  - args:
+    - --webhook-url=http://localhost:9090/-/reload
+    - --volume-dir=/etc/prometheus/rules/prometheus-cluster-monitoring-rulefiles-0
+    image: rancher/coreos-configmap-reload:v0.0.1
+    imagePullPolicy: IfNotPresent
+    name: rules-configmap-reloader
+    resources:
+      limits:
+        cpu: 100m
+        memory: 25Mi
+      requests:
+        cpu: 100m
+        memory: 25Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/prometheus/rules/prometheus-cluster-monitoring-rulefiles-0
+      name: prometheus-cluster-monitoring-rulefiles-0
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: cluster-monitoring-token-jzjlw
+      readOnly: true
+  - command:
+    - /bin/sh
+    - -c
+    - cp /nginx/run-sh.tmpl /var/cache/nginx/nginx-start.sh; chmod +x /var/cache/nginx/nginx-start.sh;
+      /var/cache/nginx/nginx-start.sh
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: rancher/nginx:1.17.4-alpine
+    imagePullPolicy: IfNotPresent
+    name: prometheus-proxy
+    ports:
+    - containerPort: 8080
+      name: nginx-http
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100Mi
+      requests:
+        cpu: 50m
+        memory: 50Mi
+    securityContext:
+      runAsGroup: 101
+      runAsUser: 101
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /nginx
+      name: configmap-prometheus-cluster-monitoring-nginx
+    - mountPath: /var/cache/nginx
+      name: nginx-home
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: cluster-monitoring-token-jzjlw
+      readOnly: true
+  - args:
+    - --proxy-url=http://127.0.0.1:9090
+    - --listen-address=$(POD_IP):9090
+    - --filter-reader-labels=prometheus
+    - --filter-reader-labels=prometheus_replica
+    command:
+    - prometheus-auth
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: rancher/prometheus-auth:v0.2.0
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 6
+      httpGet:
+        path: /-/healthy
+        port: web
+        scheme: HTTP
+      initialDelaySeconds: 300
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 10
+    name: prometheus-agent
+    ports:
+    - containerPort: 9090
+      name: web
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 10
+      httpGet:
+        path: /-/ready
+        port: web
+        scheme: HTTP
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 10
+    resources:
+      limits:
+        cpu: 500m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: cluster-monitoring-token-jzjlw
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: prometheus-cluster-monitoring-0
+  nodeName: rancher-worker-2
+  nodeSelector:
+    kubernetes.io/os: linux
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccount: cluster-monitoring
+  serviceAccountName: cluster-monitoring
+  subdomain: prometheus-operated
+  terminationGracePeriodSeconds: 600
+  tolerations:
+  - effect: NoSchedule
+    key: cattle.io/os
+    operator: Equal
+    value: linux
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: config
+    secret:
+      defaultMode: 420
+      secretName: prometheus-cluster-monitoring
+  - name: tls-assets
+    secret:
+      defaultMode: 420
+      secretName: prometheus-cluster-monitoring-tls-assets
+  - emptyDir: {}
+    name: config-out
+  - configMap:
+      defaultMode: 420
+      name: prometheus-cluster-monitoring-rulefiles-0
+    name: prometheus-cluster-monitoring-rulefiles-0
+  - name: secret-exporter-etcd-cert
+    secret:
+      defaultMode: 420
+      secretName: exporter-etcd-cert
+  - configMap:
+      defaultMode: 420
+      name: prometheus-cluster-monitoring-nginx
+    name: configmap-prometheus-cluster-monitoring-nginx
+  - emptyDir: {}
+    name: prometheus-cluster-monitoring-db
+  - emptyDir: {}
+    name: nginx-home
+  - name: cluster-monitoring-token-jzjlw
+    secret:
+      defaultMode: 420
+      secretName: cluster-monitoring-token-jzjlw
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-09-14T06:56:45Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-11-19T05:48:43Z"
+    message: 'containers with unready status: [prometheus prometheus-agent]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-11-19T05:48:43Z"
+    message: 'containers with unready status: [prometheus prometheus-agent]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-09-14T06:56:45Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://54daf58d033533cad70011ee13cdda231b406c1e5194e9c68a1ab1d041e64f3a
+    image: rancher/prom-prometheus:v2.17.2
+    imageID: docker-pullable://rancher/prom-prometheus@sha256:fec7063177b209eaa3216bab35991924fceb7ba19fe5ce763c3e5cb7e705b586
+    lastState:
+      terminated:
+        containerID: docker://54daf58d033533cad70011ee13cdda231b406c1e5194e9c68a1ab1d041e64f3a
+        exitCode: 137
+        finishedAt: "2020-11-27T12:24:01Z"
+        message: |
+          maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.805Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2615 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.805Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2616 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.806Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2617 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.806Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2618 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.807Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2619 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.807Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2620 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.807Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2621 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.807Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2622 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.808Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2623 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.808Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2624 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.808Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2625 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.809Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2626 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.809Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2627 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.809Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2628 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.870Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2629 maxSegment=4806
+          level=info ts=2020-11-27T12:24:01.871Z caller=head.go:624 component=tsdb msg="WAL segment loaded" segment=2630 maxSegment=4806
+        reason: OOMKilled
+        startedAt: "2020-11-27T12:23:50Z"
+    name: prometheus
+    ready: false
+    restartCount: 3597
+    started: false
+    state:
+      waiting:
+        message: back-off 5m0s restarting failed container=prometheus pod=prometheus-cluster-monitoring-0_cattle-prometheus(728740c5-34a3-4e1b-82a1-328f1aed4637)
+        reason: CrashLoopBackOff
+  - containerID: docker://a03bf394782fbfc74e85aeabeb3a3555f323883c74da7c81ea8b46e6509680f3
+    image: rancher/prometheus-auth:v0.2.0
+    imageID: docker-pullable://rancher/prometheus-auth@sha256:8f715bf8eb4ea41c6598ccd244da51743d14f5a5c7cb93091fdced531cf48dbe
+    lastState:
+      terminated:
+        containerID: docker://e2a6fc12569646776b48a7597fba875cd8249c42df26a095baceb640742ecfd2
+        exitCode: 2
+        finishedAt: "2020-11-27T12:24:52Z"
+        reason: Error
+        startedAt: "2020-11-27T12:18:36Z"
+    name: prometheus-agent
+    ready: false
+    restartCount: 3075
+    started: true
+    state:
+      running:
+        startedAt: "2020-11-27T12:24:54Z"
+  - containerID: docker://f0ca16ff7e2f54f074cedbf143bd6b089d58bab9a035fb6c76ebcbcf20550f84
+    image: rancher/coreos-prometheus-config-reloader:v0.38.1
+    imageID: docker-pullable://rancher/coreos-prometheus-config-reloader@sha256:d1cce64093d4a850d28726ec3e48403124808f76567b5bd7b26e4416300996a7
+    lastState:
+      terminated:
+        containerID: docker://f0cc67bf2a59cb5578de0b7802f93c9326622bc54f676b9ad8372173cd33c9dc
+        exitCode: 2
+        finishedAt: "2020-09-21T11:36:25Z"
+        message: |
+          ts=2020-09-14T06:56:48.121792506Z caller=main.go:85 msg="Starting prometheus-config-reloader version '0.38.1'."
+          level=error ts=2020-09-14T06:56:48.170236267Z caller=runutil.go:98 msg="function failed. Retrying in next tick" err="trigger reload: reload request failed: Post http://localhost:9090/-/reload: dial tcp 127.0.0.1:9090: connect: connection refused"
+          level=info ts=2020-09-14T06:56:53.144542889Z caller=reloader.go:289 msg="Prometheus reload triggered" cfg_in=/etc/prometheus/config/prometheus.yaml.gz cfg_out=/etc/prometheus/config_out/prometheus.env.yaml rule_dirs=
+          level=info ts=2020-09-14T06:56:53.144580226Z caller=reloader.go:157 msg="started watching config file and non-recursively rule dirs for changes" cfg=/etc/prometheus/config/prometheus.yaml.gz out=/etc/prometheus/config_out/prometheus.env.yaml dirs=
+        reason: Error
+        startedAt: "2020-09-14T06:56:48Z"
+    name: prometheus-config-reloader
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2020-09-21T11:37:19Z"
+  - containerID: docker://4a5e99748b7bb79cc98fb47feb7a832a4dfd52bb53bdacad35f9e9225d6b5101
+    image: rancher/nginx:1.17.4-alpine
+    imageID: docker-pullable://rancher/nginx@sha256:d48cc9a02c191ba23418522d468b3c75ed287e23018a6b6ff64043e264b5a394
+    lastState:
+      terminated:
+        containerID: docker://5f7e133ee518455e3cd98b6b6bdb0f061a0485bfb926dd8b46e445feb62582c5
+        exitCode: 0
+        finishedAt: "2020-09-21T11:36:25Z"
+        reason: Completed
+        startedAt: "2020-09-14T06:56:48Z"
+    name: prometheus-proxy
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2020-09-21T11:37:22Z"
+  - containerID: docker://d00d1e9eb6f53b77affa72746e0e4be68c0c55b7f3e66ce7af249747dc1f7b63
+    image: rancher/coreos-configmap-reload:v0.0.1
+    imageID: docker-pullable://rancher/coreos-configmap-reload@sha256:f58cb3b14aea0fc5b5f1d8f978218036b48207a2eb53079e3af9ce14db5f0676
+    lastState:
+      terminated:
+        containerID: docker://465bc6889aafbd40b9ffd0413dcbc71c088b13d891f3a1be013242367e18bc5a
+        exitCode: 2
+        finishedAt: "2020-09-21T11:36:25Z"
+        reason: Error
+        startedAt: "2020-09-14T06:56:48Z"
+    name: rules-configmap-reloader
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2020-09-21T11:37:21Z"
+  hostIP: x.xxx.xxx.xxx
+  phase: Running
+  podIP: 10.42.85.6
+  podIPs:
+  - ip: 10.42.85.6
+  qosClass: Burstable
+  startTime: "2020-09-14T06:56:45Z"

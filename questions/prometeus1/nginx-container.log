@@ -1,0 +1,2 @@
+﻿2020/09/21 11:37:22 [warn] 1#1: duplicate MIME type "text/html" in /var/cache/nginx/nginx.conf:45 
+nginx: [warn] duplicate MIME type "text/html" in /var/cache/nginx/nginx.conf:45 
