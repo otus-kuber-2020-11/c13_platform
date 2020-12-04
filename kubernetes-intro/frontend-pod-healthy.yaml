@@ -9,13 +9,7 @@ spec:
   containers:
   - image: avtandilko/hipster-frontend:v0.0.1
     name: frontend
-    resources:
-      requests:
-        cpu: 100m
-        memory: 64Mi
-      limits:
-        cpu: 200m
-        memory: 128Mi
+    resources: {}
     env:
       - name: PORT
         value: "8080"
@@ -34,7 +28,7 @@ spec:
       - name: AD_SERVICE_ADDR
         value: "adservice:9555"
       - name: ENV_PLATFORM
-        value: "minikube"
+        value: "gcp"
   dnsPolicy: ClusterFirst
   restartPolicy: Never
 status: {}
