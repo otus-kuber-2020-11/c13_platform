@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: php-daemon
+  labels:
+    app: php-daemon
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: php-daemon
+  template:
+    metadata:
+      labels:
+        app: php-daemon
+    spec:
+      containers:
+      - name: server
+        image: newrelic/php-daemon
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 250m
+            memory: 180Mi
+        ports:
+          - containerPort: 31339
