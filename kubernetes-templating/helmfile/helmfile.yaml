@@ -25,7 +25,7 @@ releases:
       - events: ["postsync"]
         showlogs: true
         command: "kubectl"
-        args: ["apply", "-f", "../cert-manager/02-cluster-issuer.yaml"]
+        args: ["apply", "-f", "../cert-manager/cluster-issuer.yaml"]
 
   - name: nginx-ingress
     namespace: nginx-ingress
