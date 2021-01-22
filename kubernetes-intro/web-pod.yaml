@@ -8,6 +8,12 @@ spec:
   containers:
     - name: web-nginx
       image: caliburn13/web:1.0
+      readinessProbe:
+        httpGet:
+          path: /index.html
+          port: 8000
+      livenessProbe:
+        tcpSocket: { port: 8000 }
       ports:
         - containerPort: 8000
       volumeMounts:
